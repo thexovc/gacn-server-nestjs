@@ -4,9 +4,11 @@ exports.transporter = void 0;
 const nodemailer = require('nodemailer');
 require('dotenv').config();
 exports.transporter = nodemailer.createTransport({
-    service: 'Gmail',
+    host: 'smtp.office365.com',
+    port: 587,
+    secure: false,
     auth: {
-        user: 'kyilaxtech@gmail.com',
+        user: 'GACNWebsite@gacn.com',
         pass: `${process.env.EMAIL_PASS}`,
     },
 });

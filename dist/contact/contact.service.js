@@ -12,8 +12,8 @@ const nodemailer_1 = require("../utils/nodemailer");
 let ContactService = class ContactService {
     async sendContactEmail(sendContactData) {
         const mailOptions = {
-            from: 'kyilaxtech@gmail.com',
-            to: 'osazeepeter79@gmail.com',
+            from: 'GACNWebsite@gacn.com',
+            to: 'GACNWebsite@gacn.com',
             subject: `Contact Email from ${sendContactData.company}`,
             text: `Email: ${sendContactData.email} \n\nPhoneNumber: ${sendContactData.phone} \n\nCompany: ${sendContactData.company} \n\nMessage: ${sendContactData.message}`,
         };

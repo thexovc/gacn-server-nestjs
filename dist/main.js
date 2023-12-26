@@ -5,7 +5,11 @@ const app_module_1 = require("./app.module");
 async function bootstrap() {
     const app = await core_1.NestFactory.create(app_module_1.AppModule);
     app.enableCors({
-        origin: ['http://localhost:3000', 'https://gacn.netlify.app'],
+        origin: [
+            'http://localhost:3000',
+            'https://gacn.netlify.app',
+            'https://gacn.com',
+        ],
         methods: ['GET', 'POST', 'PUT', 'DELETE'],
         allowedHeaders: ['Content-Type', 'Authorization'],
         exposedHeaders: ['set-cookie'],
